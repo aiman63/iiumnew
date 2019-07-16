@@ -1,0 +1,428 @@
+
+body {
+  background-color: #efefef;
+}
+
+.container-main {
+  margin-top:150px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media screen and (max-width: 977px) {
+  .menu {
+    display: none !important;
+  }
+
+  .xs-hidden {
+    display: block !important;
+    position: fixed;
+    right: 20px;
+    padding-top:20px;
+  }
+
+  .left_menu {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  header .logo {
+    margin-top: 10px;
+    width: 60% !important;
+  }
+  header .logo img {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .sec2 .news .caption .more hr {
+    width: 40% !important;
+  }
+
+  .carousel-item__title {
+    width: 150px;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+header {
+  font-family: Roboto, sans-serif;
+  margin: -8px;
+  z-index: 99;
+  height: 120px;
+  box-shadow: 0px -2px 15px 1px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+header .xs-hidden {
+  display: none;
+}
+header .logo {
+  padding: 12px;
+  float: left;
+  width: 20%;
+  padding-left: 2%;
+}
+header .logo img {
+  margin-top: 15px;
+  height: 70px;
+}
+header .menu {
+  float: left;
+  width: 60%;
+  padding: 12px;
+  text-align: right;
+  padding-top: 26px;
+}
+header .top_menu {
+  display: block;
+  font-size: 12px;
+}
+header .top_menu ul {
+  list-style-type: none;
+}
+header .top_menu ul li {
+  display: inline-block;
+}
+header .top_menu ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0px 10px 0px 10px;
+  color: #0b8f83;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+header .top_menu ul li a:hover {
+  color: #000;
+}
+header .bottom_menu {
+  display: block;
+  font-size: 15px;
+  /* margin-top: -40px; */
+}
+header .bottom_menu ul {
+  list-style-type: none;
+}
+header .bottom_menu ul li {
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+}
+header .bottom_menu ul li a {
+  text-decoration: none;
+  display: block;
+  color: #454444;
+  border-bottom: 3px solid #c7c5c5a8;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+header .bottom_menu ul li a:hover {
+  border-bottom: 3px solid #ba8740;
+}
+
+.left_menu {
+  margin-right: 2%;
+  text-align: right;
+  padding-top: 38px;
+  float: left;
+  width: 10%;
+  display: inline-block;
+  font-size: 20px;
+  color: #ba8740;
+}
+
+.left_menu span {
+  border-right: 2px solid #ba8740;
+  padding: 3px;
+  margin-right: 12px;
+}
+.left_menu .fa:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.left_menu .language{
+  font-size: small;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.left_menu .language a{
+  text-decoration: none;
+  color:#000;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.sidenav hr {
+  width: 90%;
+  margin-left: 5%;
+  clear: both;
+}
+
+.sidenav a {
+  font-family: Roboto, sans-serif;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.active {
+  z-index: 1;
+  display: flex;
+  visibility: visible;
+}
+
+.life {
+  clear: both;
+}
+
+.searchsidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.searchsidenav h2 {
+  font-family: Roboto, sans-serif;
+  padding-top: 10px;
+  color: #fff;
+  padding-left: 20px;
+  white-space: normal;
+  width: 250px;
+}
+
+.searchsidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.searchsidenav a:hover {
+  color: #f1f1f1;
+}
+
+.searchsidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .searchsidenav {
+    padding-top: 15px;
+  }
+
+  .searchsidenav a {
+    font-size: 18px;
+  }
+}
+.searchform {
+  margin: 20px;
+}
+.searchform input {
+  height: 30px;
+  width: 250px;
+  padding: 10px 10px 10px 5px;
+  border: 0px;
+  border-radius: 2px;
+  background-color: #ffffff1f;
+  color: #fff;
+}
+.searchform button {
+  height: 40px;
+  border-radius: 2px;
+  margin-top: 8px;
+  background-color: #0b8f83;
+  border: 0px;
+  width: 265px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.searchform button:hover {
+  background-color: #ba8740;
+}
+
+.footer {
+  clear: both;
+  padding-top: 50px;
+  font-family: Roboto, sans-serif;
+  font-size: smaller;
+}
+
+.footer .container {
+  padding-top: 15px;
+  margin: -8px;
+  background-color: #00918e;
+  color:#fff;
+  background-image: url(http://www.iium.edu.my/img/kerawang.png);
+  background-size: contain;
+}
+
+.footer .container .row {
+  margin:8px;
+  padding:1%;
+}
+
+.footer .col-md-3 {
+  white-space: normal;
+  width: 25%;
+  float: left;
+}
+
+.footer .col-md-3 img{
+  width: 80%;
+  padding-bottom: 20px;
+}
+
+.footer .col-md-9{
+  width: 75%;
+  float: left;
+}
+
+.footer .footer__links {
+  width: 25%;
+  float: left;
+}
+
+.footer .footer__links ul {
+  margin-left: -40px;
+}
+
+.footer .footer__links li {
+  list-style: none;
+  margin-left:0px;
+  margin-bottom: 10px;
+}
+
+.footer .footer__links li a {
+  color:#fff;
+  text-decoration: none;
+}
+
+.footer .footer__links li a:hover {
+  color:#000;
+}
+
+.footer .footer__compliance-logo {
+  clear: both;
+  text-align: center;
+}
+
+.footer .text-center {
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer .footer__copyright {
+  background-color: #fff !important;
+  height: 10px;
+  color:#000;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.footer .footer__copyright .small {
+  font-size: smaller;
+}
+
+.footer .footer__copyright .pull-left {
+  padding-left: 2%;
+}
+
+.footer .footer__copyright .pull-right {
+  padding-right: 2%;
+}
+
+.footer .footer__compliance-logo img{
+  vertical-align: middle;
+  max-height: 30px;
+}
+
+.footer .footer__compliance-logo a:hover img{
+  opacity: 0.6;
+}
+
+.footer #histats_counter {
+  margin-top: -25px;
+}
+
+@media screen and (max-width: 977px) {
+  .footer .col-md-3 {
+    width: 100% !important;
+  }
+
+  .footer .col-md-3 img{
+    width: 50%;
+  }
+
+  .footer .col-md-9{
+    width: 100% !important;
+  }
+
+  .footer .footer__links {
+    width: 90% !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* End Bullet Jump */
+/*# sourceMappingURL=iium.css.map */
